@@ -76,6 +76,7 @@ O módulo http em Node.js permite criar servidores HTTP para lidar com solicita�
 - Trabalhar com URLs e Rotas: Você pode analisar URLs de solicitação HTTP usando o módulo url, permitindo a implementação de rotas personalizadas.
 
 - Processar Parâmetros de Consulta e Corpos de Solicitação: Você pode acessar os parâmetros de consulta de uma solicitação GET e os dados enviados em uma solicitação POST para realizar operações baseadas neles.
+Erro: ReferenceError: minhaOperacaoAssincrona is not defined
 
 - Configurar Segurança: Você pode configurar certificados SSL/TLS para fornecer uma comunicação segura usando o protocolo HTTPS.
 
@@ -84,6 +85,25 @@ O módulo http em Node.js permite criar servidores HTTP para lidar com solicita�
 - Conectar-se a Outros Servidores HTTP: Você pode usar o módulo http para fazer solicitações HTTP a outros servidores.
 
 No entanto, enquanto é possível criar aplicativos web simples usando apenas o módulo http, muitas vezes é preferível usar estruturas mais avançadas e flexíveis, como o Express.js, que simplificam o desenvolvimento e fornecem recursos adicionais, como roteamento avançado, middleware, manipulação de erros, entre outros.
+
+## Promises, async e await
+
+- As Promises são objetos usados para representar o eventual resultado de uma operação assíncrona.
+
+- Uma Promise pode estar em um dos três estados: pendente, resolvida ou rejeitada.
+
+- Você pode criar Promises usando o construtor Promise.
+
+- As Promises possuem os métodos .then() para manipular o sucesso e .catch() para lidar com falhas.
+
+Tanto o uso de .then() e .catch() quanto o uso de async e await produzem essencialmente os mesmos resultados. Ambas as abordagens lidam com operações assíncronas de forma eficaz, permitindo que você execute código em resposta à resolução ou rejeição de uma Promise.
+
+A principal diferença entre as duas abordagens está na sintaxe e na maneira como o código é estruturado:
+
+- .then() e .catch(): Essa é uma abordagem mais tradicional e baseada em callbacks. Você encadeia chamadas de .then() para lidar com o sucesso da Promise e usa .catch() para lidar com falhas. Isso pode levar a uma "callback hell" em casos de muitas operações encadeadas.
+
+- async e await: Essa é uma abordagem mais moderna e baseada em Promises. Você define funções assíncronas com async e usa await dentro delas para aguardar a resolução ou rejeição de Promises. Isso torna o código mais linear e fácil de entender, especialmente em casos de várias operações assíncronas.
+
 
 ## Saiba Mais
 
